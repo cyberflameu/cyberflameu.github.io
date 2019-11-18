@@ -27,9 +27,19 @@
      <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
         <div class="uk-offcanvas-bar">
                 <ul class="uk-nav">
-                    <li><a class="uk-text-large" href="https://shubhamjain.co/about/">about</a></li>
-                    <li><a class="uk-text-large" href="https://shubhamjain.co/">blog</a></li>
-                    ....
+                    <li class="uk-active"><a href="/">Home</a></li>
+                    <li>
+                        <a href="#">Our sites</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="/" class="text">CyberFlameu.github.io</a></li>
+                                <li><a href="http://cyberfla.me" target="_blank" class="text">CyberFla.me</a></li>
+                                <li><a href="http://cyberflame.xyz" target="_blank" class="text">CyberFlame.xyz</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">About</a></li>
+                  <li><a href="#">Our work</a></li>
                 </ul>
         </div>
     </div>
@@ -39,7 +49,7 @@
         <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
             <div class="uk-navbar-left">
                 <ul class="uk-navbar-nav ">
-                    <a class="uk-navbar-toggle uk-hiddens" uk-toggle="target: #sidenav"  uk-navbar-toggle-icon></a>
+                  <li><a class="uk-navbar-toggle uk-hiddens" uk-toggle="target: #sidenav"  uk-navbar-toggle-icon></a></li>
                   <div class="uk-visible@s">
                     <li class="uk-active"><a href="/">Home</a></li>
                     <li>
