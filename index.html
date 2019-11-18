@@ -37,9 +37,10 @@
      <!-- normal menu -->
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
         <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
-            <div class="uk-navbar-left uk-visible@s">
-                <ul class="uk-navbar-nav">
-                    <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav"  uk-navbar-toggle-icon></a>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav ">
+                    <a class="uk-navbar-toggle uk-hiddens" uk-toggle="target: #sidenav"  uk-navbar-toggle-icon></a>
+                  <div class="uk-visible@s">
                     <li class="uk-active"><a href="/">Home</a></li>
                     <li>
                         <a href="#">Our sites</a>
@@ -53,6 +54,7 @@
                     </li>
                     <li><a href="#">About</a></li>
                   <li><a href="#">Our work</a></li>
+                  </div>
                 </ul>
 
             </div>
