@@ -85,7 +85,7 @@
 
     <!-- content -->
     <div class="content">
-      <a href="#modal-example" uk-toggle class="uk-button uk-button-default uk-align-center uk-margin">Open</a>
+      <a href="#modal-example" uk-toggle class="uk-button uk-button-default uk-align-center uk-margin" id="thebtn">Do <strong>things</strong> and <strong>stuff!</strong></a>
       <div id="text"></div>
     </div>
     
@@ -99,7 +99,8 @@
    </div>
     <script>
       // Create event listener
-    document.onLoad(loadText());
+    //document.onLoad(loadText());
+      document.getElementById('thebtn').addEventListener('click', loadText);
 
     function loadText(){
       // Create XHR Object
