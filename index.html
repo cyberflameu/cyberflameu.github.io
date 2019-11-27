@@ -2,7 +2,7 @@
 <html>
   <head> 
     <!-- TITLE -->
-    <title>CyberFlameU's GitHub site</title>
+    <title>CyberFlameU</title>
     
     <!-- META tags -->
     <meta charset="utf-8">
@@ -102,6 +102,7 @@
     </div>
    </div>
     <script>
+      /*
       $.getJSON('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UChNnX9oGYAG-25aIAY_czbA&key=AIzaSyCC4CFoEwccgz8FZbJ6ZU9LXLh4G1m1ToQ', function(data) {
           //data is the JSON string
           doument.getElementById('cSubs').innerHtml = data.items.statistics.subscriberCount;
@@ -110,6 +111,37 @@
           //data is the JSON string
           doument.getElementById('eSubs').innerHtml = data.items.statistics.subscriberCount;
       });
+      */
+      var getJSON = function(url, callback) {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', url, true);
+          xhr.responseType = 'json';
+          xhr.onload = function() {
+            var status = xhr.status;
+            if (status === 200) {
+              callback(null, xhr.response);
+            } else {
+              callback(status, xhr.response);
+            }
+          };
+          xhr.send();
+      };
+      getJSON('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UChNnX9oGYAG-25aIAY_czbA&key=AIzaSyCC4CFoEwccgz8FZbJ6ZU9LXLh4G1m1ToQ',
+        function(err, data) {
+          if (err !== null) {
+            alert('Something went wrong: ' + err);
+          } else {
+            alert('Your query count: ' + data.query.count);
+          }
+        });
+      getJSON('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCK1ME1J0XNbN31bCOV9UjKw&key=AIzaSyCC4CFoEwccgz8FZbJ6ZU9LXLh4G1m1ToQ',
+        function(err, data) {
+          if (err !== null) {
+            alert('Something went wrong: ' + err);
+          } else {
+            alert('Your query count: ' + data.query.count);
+          }
+        });
       
       // Create event listener
     //document.onLoad(loadText());
