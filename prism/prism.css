@@ -1,16 +1,16 @@
 /* PrismJS 1.17.1
-https://prismjs.com/download.html#themes=prism-dark&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+antlr4+apacheconf+apl+applescript+aql+c+arff+asciidoc+asm6502+csharp+autohotkey+autoit+bash+basic+batch+bbcode+bison+bnf+brainfuck+brightscript+bro+cpp+aspnet+arduino+cil+coffeescript+cmake+clojure+ruby+csp+css-extras+d+dart+diff+markup-templating+dns-zone-file+docker+ebnf+eiffel+ejs+elixir+elm+lua+erb+erlang+fsharp+firestore-security-rules+flow+fortran+ftl+gcode+gdscript+gedcom+gherkin+git+glsl+gml+go+graphql+groovy+less+handlebars+haskell+haxe+hcl+http+hpkp+hsts+ichigojam+icon+inform7+ini+io+j+java+scala+php+javastacktrace+jolie+jq+javadoclike+n4js+markdown+json+jsonp+json5+julia+keyman+kotlin+latex+crystal+scheme+liquid+lisp+livescript+lolcode+etlua+makefile+js-templates+django+matlab+mel+mizar+monkey+moonscript+n1ql+typescript+nand2tetris-hdl+nasm+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+pascaligo+pcaxis+perl+jsdoc+phpdoc+php-extras+sql+powershell+processing+prolog+properties+protobuf+scss+puppet+pure+python+q+qore+r+js-extras+jsx+renpy+reason+vala+rest+rip+roboconf+robotframework+textile+rust+plsql+sass+stylus+javadoc+lilypond+shell-session+smalltalk+smarty+solidity+soy+turtle+splunk-spl+sqf+sas+twig+swift+yaml+tcl+haml+toml+tt2+sparql+pug+tsx+t4-templating+visual-basic+t4-cs+regex+vbnet+velocity+verilog+vhdl+vim+t4-vb+wasm+wiki+xeora+xojo+xquery+tap+zig&plugins=toolbar+show-language+copy-to-clipboard+download-button+match-braces */
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+antlr4+apacheconf+apl+applescript+aql+c+arff+asciidoc+asm6502+csharp+autohotkey+autoit+bash+basic+batch+bbcode+bison+bnf+brainfuck+brightscript+bro+cpp+aspnet+arduino+cil+coffeescript+cmake+clojure+ruby+csp+css-extras+d+dart+diff+markup-templating+dns-zone-file+docker+ebnf+eiffel+ejs+elixir+elm+lua+erb+erlang+fsharp+firestore-security-rules+flow+fortran+ftl+gcode+gdscript+gedcom+gherkin+git+glsl+gml+go+graphql+groovy+less+handlebars+haskell+haxe+hcl+http+hpkp+hsts+ichigojam+icon+inform7+ini+io+j+java+scala+php+javastacktrace+jolie+jq+javadoclike+n4js+markdown+json+jsonp+json5+julia+keyman+kotlin+latex+crystal+scheme+liquid+lisp+lolcode+etlua+makefile+js-templates+django+matlab+mel+mizar+monkey+moonscript+n1ql+typescript+nand2tetris-hdl+nasm+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+pascaligo+pcaxis+perl+jsdoc+phpdoc+php-extras+sql+powershell+processing+prolog+properties+protobuf+scss+puppet+pure+python+q+qore+r+js-extras+jsx+renpy+reason+vala+rest+rip+roboconf+robotframework+textile+rust+plsql+sass+stylus+javadoc+lilypond+shell-session+smalltalk+smarty+solidity+soy+turtle+splunk-spl+sqf+sas+twig+swift+yaml+tcl+haml+toml+tt2+sparql+pug+tsx+t4-templating+visual-basic+t4-cs+regex+vbnet+velocity+verilog+vhdl+vim+t4-vb+wasm+wiki+xeora+xojo+xquery+tap+zig&plugins=line-highlight+line-numbers+file-highlight+toolbar+highlight-keywords+inline-color+show-language+copy-to-clipboard+download-button+match-braces+diff-highlight */
 /**
- * prism.js Dark theme for JavaScript, CSS and HTML
- * Based on the slides of the talk “/Reg(exp){2}lained/”
- * @author Lea Verou
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
  */
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: white;
+	color: #f8f8f2;
 	background: none;
-	text-shadow: 0 -.1em .2em black;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
 	text-align: left;
@@ -30,34 +30,23 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-@media print {
-	code[class*="language-"],
-	pre[class*="language-"] {
-		text-shadow: none;
-	}
-}
-
-pre[class*="language-"],
-:not(pre) > code[class*="language-"] {
-	background: hsl(30, 20%, 25%);
-}
-
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
-	border: .3em solid hsl(30, 20%, 40%);
-	border-radius: .5em;
-	box-shadow: 1px 1px .5em black inset;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .15em .2em .05em;
+	padding: .1em;
 	border-radius: .3em;
-	border: .13em solid hsl(30, 20%, 40%);
-	box-shadow: 1px 1px .3em -.1em black inset;
 	white-space: normal;
 }
 
@@ -65,11 +54,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: hsl(30, 20%, 50%);
+	color: slategray;
 }
 
 .token.punctuation {
-	opacity: .7;
+	color: #f8f8f2;
 }
 
 .namespace {
@@ -78,11 +67,15 @@ pre[class*="language-"] {
 
 .token.property,
 .token.tag,
-.token.boolean,
-.token.number,
 .token.constant,
-.token.symbol {
-	color: hsl(350, 40%, 70%);
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
 }
 
 .token.selector,
@@ -91,7 +84,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: hsl(75, 70%, 60%);
+	color: #a6e22e;
 }
 
 .token.operator,
@@ -100,18 +93,23 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: hsl(40, 90%, 60%);
+	color: #f8f8f2;
 }
 
 .token.atrule,
 .token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
 .token.keyword {
-	color: hsl(350, 40%, 70%);
+	color: #66d9ef;
 }
 
 .token.regex,
 .token.important {
-	color: #e90;
+	color: #fd971f;
 }
 
 .token.important,
@@ -126,9 +124,97 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
-.token.deleted {
-	color: red;
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
 }
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start);
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		min-width: 1em;
+		padding: 0 .5em;
+		background-color: hsla(24, 20%, 50%,.4);
+		color: hsl(24, 20%, 95%);
+		font: bold 65%/1.5 sans-serif;
+		text-align: center;
+		vertical-align: .3em;
+		border-radius: 999px;
+		text-shadow: none;
+		box-shadow: 0 1px white;
+	}
+
+	.line-highlight[data-end]:after {
+		content: attr(data-end);
+		top: auto;
+		bottom: .4em;
+	}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
+}
+
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
 
 div.code-toolbar {
 	position: relative;
@@ -195,6 +281,16 @@ div.code-toolbar > .toolbar span:focus {
 	text-decoration: none;
 }
 
+span.inline-color {
+	display: inline-block;
+	height: 1.333ch;
+	width: 1.333ch;
+	margin: 0 .333ch;
+	box-sizing: border-box;
+	border: 1px solid white;
+	outline: 1px solid black;
+}
+
 .token.punctuation.brace-hover,
 .token.punctuation.brace-selected {
 	outline: solid 1px;
@@ -223,5 +319,19 @@ div.code-toolbar > .toolbar span:focus {
 .rainbow-braces .token.punctuation.brace-level-12 {
 	color: #E0E;
 	opacity: 1;
+}
+
+pre.diff-highlight > code .token.deleted:not(.prefix),
+pre > code.diff-highlight .token.deleted:not(.prefix) {
+	background-color: rgba(255, 0, 0, .1);
+	color: inherit;
+	display: block;
+}
+
+pre.diff-highlight > code .token.inserted:not(.prefix),
+pre > code.diff-highlight .token.inserted:not(.prefix) {
+	background-color: rgba(0, 255, 128, .1);
+	color: inherit;
+	display: block;
 }
 
